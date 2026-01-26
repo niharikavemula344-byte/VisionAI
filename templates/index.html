@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VisionText AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="splash">
+    <h1>Welcome to <span>VisionText AI</span></h1>
+    <p>Powered by <b>NiharikaVemula</b></p>
+</div>
+
+<div class="container">
+    <h2>Image Caption Generator</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+
+        <select name="style" required>
+            <option value="professional">Professional Caption</option>
+            <option value="funny">Funny Caption</option>
+            <option value="dramatic">Dramatic Caption</option>
+        </select>
+
+        <button type="submit">Upload & Generate</button>
+    </form>
+
+    {% if image %}
+        <img src="/static/{{ image }}" class="preview">
+    {% endif %}
+
+    {% if caption %}
+        <div class="result">
+            <h3>Caption:</h3>
+            <p>{{ caption }}</p>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

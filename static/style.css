@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff5f9e, #ffc371);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Splash Animation */
+.splash {
+    position: fixed;
+    inset: 0;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 2.5s forwards;
+    z-index: 10;
+}
+
+.splash span {
+    color: hotpink;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    width: 420px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+input, select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background: deeppink;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.preview {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.result {
+    margin-top: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+}
