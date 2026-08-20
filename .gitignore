@@ -9,8 +9,10 @@ __pycache__/
 # ML / HuggingFace cache
 .cache/
 models/
+static/uploads/
 *.pt
 *.bin
 *.pkl
 *.onnx
 *.h5
+.DS_Store
